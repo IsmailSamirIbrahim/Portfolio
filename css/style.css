@@ -127,7 +127,15 @@ a {
   margin: 0 2rem;
 }
 
-.list--inline .list__item:hover {
-  border-bottom: 1px solid var(--color-secondary);
-  opacity: 0.6;
+/* Media */
+
+.media {
+  display: flex;
+  line-height: 1.5;
+}
+
+.media .media__heading {
+  margin: 0;
+}
+
 }
