@@ -4,6 +4,8 @@
   --color-body: #555555;
   --color-primary: #000;
   --color-secondary: #353535;
+  --color-border: #a3a3a3;
+  --border-radius: 30px;
 }
 
 *,
@@ -46,6 +48,10 @@ h3 {
   font-size: 2rem;
 }
 
+p {
+  margin: 0;
+}
+
 @media screen and (min-width: 1024) {
   body {
     font-size: 1.8rem;
@@ -67,8 +73,8 @@ h3 {
 /* Icons */
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   margin: 0.5rem;
 }
 
@@ -76,8 +82,8 @@ h3 {
 
 .btn {
   text-transform: capitalize;
-  border-radius: 30px;
-  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  padding: 1.6rem;
   outline: 0;
   border: 0;
 }
@@ -92,7 +98,7 @@ h3 {
 }
 
 .btn--outline {
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--color-border);
   background: #fff;
 }
 
@@ -106,6 +112,11 @@ h3 {
 a {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--color-border);
+  opacity: 0.6;
 }
 
 .list {
