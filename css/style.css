@@ -138,4 +138,64 @@ a {
   margin: 0;
 }
 
+/* Cards */
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.card--about .media {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card--experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card--experience .card__heading {
+  color: var(--color-body);
+}
+
+.card--experience .media {
+  margin: 2rem 0;
+}
+
+.card--experience .media__content {
+  margin-left: 2rem;
+}
+
+.card--project {
+  background: #fafafa;
+  text-align: center;
+}
+
+.card--project .card__image {
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.card--project .card__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card--contact {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card--contact .contact__info {
+  display: flex;
+}
+
+.card--contact .contact__info > a {
+  display: flex;
+  align-items: center;
 }
