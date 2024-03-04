@@ -212,6 +212,7 @@ a:hover {
 }
 
 /* Grids */
+
 .grid {
   display: grid;
 }
@@ -226,4 +227,32 @@ a:hover {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Collapsible */
+
+.collapsible {
+  position: relative;
+}
+
+.collapsible__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible__header > i {
+  font-size: 5rem;
+  color: var(--color-primary);
+}
+
+.collapsible__content {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 90px;
+}
+
+.collapsible--expanded .collapsible__content {
+  display: block;
 }
