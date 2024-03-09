@@ -25,9 +25,6 @@ body {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: var(--color-body);
-
-  /* TODO: Remove this code later*/
-  padding: 10rem;
 }
 
 h1,
@@ -158,6 +155,11 @@ a:hover {
   padding: 2rem;
 }
 
+.card--about {
+  display: flex;
+  justify-content: center;
+}
+
 .card--about .media {
   flex-direction: column;
   align-items: center;
@@ -170,10 +172,6 @@ a:hover {
   align-items: center;
 }
 
-.card--experience .card__heading {
-  color: var(--color-body);
-}
-
 .card--experience .media {
   margin: 2rem 0;
 }
@@ -183,8 +181,10 @@ a:hover {
 }
 
 .card--project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fafafa;
-  text-align: center;
 }
 
 .card--project .card__image {
@@ -192,9 +192,10 @@ a:hover {
   width: 100%;
 }
 
-.card--project .card__buttons {
+.card--project .card__btn-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .card--contact {
@@ -203,10 +204,6 @@ a:hover {
 }
 
 .card--contact .contact__info {
-  display: flex;
-}
-
-.card--contact .contact__info > a {
   display: flex;
   align-items: center;
 }
@@ -237,22 +234,19 @@ a:hover {
 
 .collapsible__header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.collapsible__header > i {
-  font-size: 5rem;
-  color: var(--color-primary);
+  align-items: center;
 }
 
 .collapsible__content {
+  max-height: 0;
+  opacity: 0;
   position: absolute;
-  display: none;
   right: 0;
-  top: 90px;
+  top: 55px;
 }
 
 .collapsible--expanded .collapsible__content {
-  display: block;
+  max-height: 100vh;
+  opacity: 1;
 }
